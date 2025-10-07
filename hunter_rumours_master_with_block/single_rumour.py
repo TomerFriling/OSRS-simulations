@@ -11,9 +11,9 @@ def catch_counter(task: str):
 
 
 def generate_task(previous_task: str, chin_is_blocked=False):
-    next_task = ["Herbiboar", "dashing_kebbit"]
+    next_task = ["herbiboar", "dashing_kebbit"]
     if not chin_is_blocked:
-        next_task = ["Herbiboar", "dashing_kebbit"] + ["red_chinchompa"]
+        next_task = ["herbiboar", "dashing_kebbit"] + ["red_chinchompa"]
 
     if previous_task == "tecu_salamander":
         return random.choice(next_task)
@@ -21,4 +21,4 @@ def generate_task(previous_task: str, chin_is_blocked=False):
 
 
 def xp_calculator(catches: int, task: str):
-    return catches * xp_table["task"] + xp_table["master_rumour"]
+    return catches * xp_table[task] + xp_table["master_rumour"]
